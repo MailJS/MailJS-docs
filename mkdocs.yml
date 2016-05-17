@@ -1,0 +1,17 @@
+site_name: MailJS API docs
+theme: 'material'
+repo_name: 'GitHub'
+repo_url: 'https://github.com/MailJS/MailJS-docs'
+site_author: 'AtlasDev'
+site_url: 'https://mailjs.net'
+site_description: 'Redefine your mail.'
+copyright: 'Copyright (c) 2016 AtlasDev'
+extra:
+  logo: 'logo.png'
+  author:
+    github: 'MailJS'
+    twitter: 'AtlasDevNL'
+pages:
+- Home: index.md
+- Objects: objects.md
+- Login: login.md
