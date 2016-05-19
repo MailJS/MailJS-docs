@@ -4,7 +4,7 @@ This API covers all endpoints to use MailJS in your own application. This page c
 
 ## Version
 
-MailJS ios constantly growing in code. These docs **only supports API v2**. Docs for v1 are not available, because it is obsolite. On every endpoint it is written from which version that specific endpoint has been introduced. Any changes at that specific endpoint is also defined right there.
+MailJS is constantly growing in code. These docs **only supports API v2**. Docs for v1 are not available, because it is obsolite. On every endpoint it is written from which version that specific endpoint has been introduced. Any changes at that specific endpoint is also defined right there.
 
 ## Authentication
 
@@ -26,26 +26,26 @@ MailJS has a advanced permission system. A user is part of at least one group, w
 
 Scopes are used in [OAuth 2.0](#oauth-20) to limit the power of an application. Scopes behave the same as permissions.
 
-Node | Description
---- | ---
-users.view | Able to view all registered users.
-users.invite | Able to create invitation tokens to invite new users.
-users.update | Able to update generic information of a user (e.g. full name, birthday).
-users.update.username | Able to update the username of a user.
-users.update.password | Able to update the password of a user.
-users.update.group | Able to update the groups of the user. **Warning!** *Only give this one to super admins. This node basicaly means they have **all** permissions.*
-users.remove | Able to delete the user.
-groups.create | Able to create a new group.
-groups.update | Able to update generic information of a group (e.g. group name, group color).
-groups.update.permissions | Able to update permission nodes of a user. **Warning!** *Only give this one to super admins. This node basicaly means they have **all** permissions.*
-groups.remove | Able to delete existing groups.
-mailbox.create | Able to create new mailboxes.
-mailbox.invite | Able to create invites to a mailbox.
-mailbox.removeUser | Able to remove a user from a mailbox.
-mailbox.purge | Able to delete **all** email assosiated with the mailbox. **Warning!** *Emails of purged mailboxes are lost forever (a long time)!*
-mailbox.delete | Able to delete a mailbox **Warning!** *Deleted mailboxes are lost forever (a long time)! Contact lists are lost too.*
-mail.send | Able to send emails.
-mail.send.external | Able to send emails over SMTP.
+Node | Description | Default
+--- | --- | ---
+users.view | Able to view all registered users. | false
+users.invite | Able to create invitation tokens to invite new users. | false
+users.update | Able to update generic information of a user (e.g. full name, birthday). | false
+users.update.username | Able to update the username of a user. | false
+users.update.password | Able to update the password of a user. | false
+users.update.group | Able to update the groups of the user. **Warning!** *Only give this one to super admins. This node basicaly means they have **all** permissions.* | false
+users.remove | Able to delete the user. | false
+groups.create | Able to create a new group. | false
+groups.update | Able to update generic information of a group (e.g. group name, group color). | false
+groups.update.permissions | Able to update permission nodes of a user. **Warning!** *Only give this one to super admins. This node basicaly means they have **all** permissions.* | false
+groups.remove | Able to delete existing groups. | false
+mailbox.create | Able to create new mailboxes. | false
+mailbox.invite | Able to create invites to a mailbox. | false
+mailbox.removeUser | Able to remove a user from a mailbox. | false
+mailbox.purge | Able to delete **all** email assosiated with the mailbox. **Warning!** *Emails of purged mailboxes are lost forever (a long time)!* | false
+mailbox.delete | Able to delete a mailbox **Warning!** *Deleted mailboxes are lost forever (a long time)! Contact lists are lost too.* | false
+mail.send | Able to send emails. | false
+mail.send.external | Able to send emails over SMTP. | false
 
 Mailbox admins have the following permissions of the mailbox:
 
