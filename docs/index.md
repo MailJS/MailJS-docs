@@ -81,6 +81,18 @@ ELIMIT | 429 | Rate limiter blocked the request. Wait till the limit has been cl
 
 **Watch out!** 500 errors are rare, but might or might not follow the defined guildlines! These errors are *always* fatal!
 
+## Domain registrations
+MailJS is able to accept new domains on the fly, and creating certificates with it. Certificate generation is done on domain creation and (at most) ones every two months.
+The CA is [Let's Encrypt](https://letsencrypt.org). This CA is compleatly free, but must have domain verification. This is done trough HTTP and DNS.
+MailJS checks the verification on it's own before the cerificate is requested from Let's Encrypt.
+
+MailJS handles a harsh protocol with failing to comply to the verification. A error message is displayed to the user when it failes when creating a domain.
+This gives the user a chance to fix there misconfiguration. When regenerationg the domain failes, the domain will be susspended immediantly.
+This means that domain is not usable for connecting to MailJS anymore. This means that mail receiving, mail sending, mail reading is disabled till the issue is fixed.
+The admin of the domain needs to fix the issue, then log in to MailJS using a sepperate domain and click on retry. The domain will be enabled again if the issue was resolved.
+MailJS can remove the domain, and every mailbox connected to it, seven days after the domain has been suspended.
+It is required to do another try to regenerate the certificate before removing the domain.
+
 ## Thats it!
 
 Now you have covered the basic usage of the API. Pick a subject you want in the sidebar to get started.
