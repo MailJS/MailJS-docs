@@ -93,6 +93,11 @@ The admin of the domain needs to fix the issue, then log in to MailJS using a se
 MailJS can remove the domain, and every mailbox connected to it, seven days after the domain has been suspended.
 It is required to do another try to regenerate the certificate before removing the domain.
 
+The dns of the to register domain **must** be in the following format. `example.com` is the domain to be registered, `51.254.135.78` is the IP of the MailJS instance.
+
+`example.com` 3600 IN MX 10 `mail.example.com`
+`mail.example.com`. IN A `51.254.135.78`.
+
 ## Thats it!
 
 Now you have covered the basic usage of the API. Pick a subject you want in the sidebar to get started.
