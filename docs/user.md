@@ -9,7 +9,7 @@ Get the avatar of a user.
 ### URL Parameters:
 Parameter | Description
 --- | ---
-username | MD5 of the user to get the avatar for.
+username | Username of the user to get the avatar for.
 
 ### Returns:
 ``` PNG
